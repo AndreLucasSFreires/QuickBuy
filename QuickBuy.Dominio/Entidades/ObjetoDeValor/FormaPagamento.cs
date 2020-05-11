@@ -4,7 +4,7 @@ using System.Text;
 
 namespace QuickBuy.Dominio.Entidades.ObjetoDeValor
 {
-    public class FormaPagamento
+    public class FormaPagamento : Entidade
     {
         public int Id { get; set; }
         public string Nome { get; set; }
@@ -36,6 +36,11 @@ namespace QuickBuy.Dominio.Entidades.ObjetoDeValor
             {
                 return Id == (int)Enumerados.TipoFormaPagamentoEnum.NaoDefinido;
             }
+        }
+
+        public override void Validate()
+        {
+            
         }
     }
 }
